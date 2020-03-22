@@ -16,7 +16,7 @@ function App() {
   return (
 
     <Provider store={store}>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
   <Navbar></Navbar>
   <Route exact path="/" component={Landing}></Route>
   <Route exact path="/movie/:id" component={Movie}></Route>
