@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {featchCountry,getData,retrieveCountry} from '../../actions/searchAction';
+import {getData,retrieveCountry} from '../../actions/searchAction';
 import {Container,Col,Row} from 'react-bootstrap';
 
 export class SearchCountry extends Component{
@@ -34,7 +34,7 @@ render(){
     <Container fluid>
     <Row>
       <Col md={{ span: 4, offset: 4 }}>
-      <div class='select'>
+      <div className="select">
       <select className="custom-select" value={this.value}  onChange={this.handleChange.bind(this)}>
         {countryName.map((option,index)=>
           <option key={index} value={index}>{option.country}</option>
