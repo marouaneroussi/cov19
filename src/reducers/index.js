@@ -3,5 +3,5 @@ import searchReducers from './searchReducers';
 
 
 export default combineReducers({
-  movies : searchReducers,
+  Countries : searchReducers,
 });

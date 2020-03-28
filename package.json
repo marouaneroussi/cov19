@@ -1,6 +1,6 @@
 {
-  "homepage": "http://ozilmarouane.github.io/react-app-imdb",
-  "name": "moviesapp",
+  "homepage": "http://marouaneroussi.github.io/Covid-19",
+  "name": "Covid-19-Morroco",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,8 +13,14 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "flat-ui": "^2.1.1",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "material-kit-react": "^1.8.0",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",

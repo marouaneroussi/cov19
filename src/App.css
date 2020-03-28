@@ -2,7 +2,8 @@
 
 html,
 body {
-  height: 100%;
+  background: #e2e1e0;
+  text-align: center;
 }
 
 #page-content {
@@ -12,12 +13,92 @@ body {
 #sticky-footer {
   flex-shrink: none;
 }
+/* select input */
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #ffffff;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+.custom-select:focus {
+
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #ffffff;
+
+}
+.bg-light {
+
+    background-color: #fefeff !important;
+    box-shadow: 2px 11px 2px #e0dede;
+
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #ffffff;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+
 
 /* Other Classes for Page Styling */
+.card-title.text-center {
 
-body {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
+    padding-top: 30px;
+    font-weight: 50;
+    font-size: 43pt;
+    font-weight: lighter;
+
+}
+.card-header.text-center {
+
+    font-weight: lighter;
+    font-size: larger;
+
+}
+.card.text-dark.bg-white.mb-3.card-height {
+
+    box-shadow: 2px 2px 2px gainsboro;
+
+}
+.card-height{
+  height:  240px;
 }
 .main {
     width: 50%;
@@ -40,4 +121,32 @@ body {
     text-align: center;
     pointer-events: none;
     color: #aaa;
+}
+.input-group.mb-3 {
+    margin-bottom: ;
+    margin-top: 100px;
+    margin-bottom: 106px;
+    width: 50%;
+    text-align: center;
+    margin-left: 270px;
+
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    color: #FFFFFF;
 }

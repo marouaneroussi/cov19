@@ -1,21 +1,17 @@
 import React,{Component} from 'react';
-import {connect} from 'react-redux';
-import SearchForm from './SearchForm';
-import MovieContainer from './MovieContainer';
-import Spinner from '../layout/Spinner';
+import SearchCountry from './SearchCountry';
+import CardData from './CardData';
 export class Landing extends Component{
   render(){
-    const {loading} = this.props;
     return(
- <div className="container">
-   <SearchForm />
-   {loading ? <Spinner /> : <MovieContainer /> }
- </div>
-    )
+       <div>
+      <SearchCountry />
+      <CardData />
+      </div>
+
+)
   }
 }
 
-const mapStateToProps = state => ({
-  loading:state.movies.loading
-})
-export default connect(mapStateToProps)(Landing);
+
+export default Landing;

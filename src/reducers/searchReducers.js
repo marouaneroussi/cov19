@@ -1,39 +1,28 @@
-import {SEARCH_MOVIES,FEATCH_MOVIES,FEATCH_MOVIE,SET_LOADING} from '../actions/types';
+import {FEATCH_COUNTRY,RETRIEVE_COUNTRY,GET_DATA_SUCCESS} from '../actions/types';
 
 const initialState = {
-  text : '',
-  movies : [],
-  loading : false,
-  movie : []
+  countryName : [],
+  country : [],
+  data:null
 }
 
 export default function(state=initialState,action){
   switch (action.type) {
-    case SEARCH_MOVIES:
+    case FEATCH_COUNTRY:
       return{
         ...state,
-        text:action.payload,
-        loading:false
+        countryName:action.payload,
       }
-      case FEATCH_MOVIES:
-      return{
-        ...state,
-        movies:action.payload,
-        loading:false
-
-      }
-      case FEATCH_MOVIE:
-      return{
-        ...state,
-        movie:action.payload,
-        loading:false
-
-      }
-      case SET_LOADING:
-      return{
-        ...state,
-        loading:true
-      }
+      case RETRIEVE_COUNTRY:
+        return{
+          ...state,
+          country:action.payload,
+        }
+        case GET_DATA_SUCCESS:
+          return{
+            ...state,
+            data:action.data,
+          }
     default:
       return state
   }

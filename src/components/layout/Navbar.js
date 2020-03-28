@@ -1,29 +1,18 @@
 import React from 'react';
+import {Navbar} from 'react-bootstrap';
 
-const Navbar = props =>{
+const Navbars = props =>{
 
   return  <div>
-  <nav className="navbar navbar-dark bg-dark">
-  <a className="navbar-brand" href="/">Movies Series info </a>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <div className="collapse navbar-collapse" id="navbarText">
-    <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
-        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-      </li>
+  <Navbar bg="light" expand="lg">
+  <Navbar.Brand href="#home">Covid-19</Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-    </ul>
-    <span className="navbar-text">
-      Navbar text with an inline element
-    </span>
-  </div>
-  </nav>
-
+</Navbar>
+<br></br>
   </div>
 
 
 
 }
-export default Navbar;
+export default Navbars;

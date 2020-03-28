@@ -1,35 +1,50 @@
-import {SEARCH_MOVIES,FEATCH_MOVIES,FEATCH_MOVIE,SET_LOADING} from './types';
-import {ApiKey} from '../ApiKey';
+import {FEATCH_COUNTRY,RETRIEVE_COUNTRY,GET_DATA_SUCCESS} from './types';
 import axios  from 'axios';
-export const searchMovie = text =>dispatch=>{
-  dispatch({
-    type:SEARCH_MOVIES,
-    payload : text
-  })
-
+const getDataSuccess = (data) => {
+    return {
+        type: GET_DATA_SUCCESS,
+        data: data
+    }
 }
 
-export const featchMovie = text =>dispatch=>{
-  axios.get(`https://www.omdbapi.com/?apikey=${ApiKey}&s=${text}`)
-    .then(res => dispatch({
-        type:FEATCH_MOVIES,
-        payload : res.data,
-      })
-    )
-    .catch(err=>console.log('erreur'))
+export const getData = (url, props) => {
+    return (dispatch) => {
+        axios.get(url)
+        .then(response => {
+            dispatch(getDataSuccess(response.data));
+        })
+        .catch(error => {
+            //TODO: handle the error when implemented
+        })
+    }
 }
+export const featchCountry = (url, props) => dispatch =>{
 
-export const featchMovies = id =>dispatch=>{
-  axios.get(`https://www.omdbapi.com/?apikey=${ApiKey}&i=${id}`)
-    .then(res => dispatch({
-        type:FEATCH_MOVIE,
-        payload : res.data,
-      })
-    )
-    .catch(err=>console.log('erreur'))
+    axios.get(url)
+      .then(response =>dispatch({
+          type:FEATCH_COUNTRY,
+          payload : response.data
+        })
+
+      )
+      .catch(
+        err=>console.log(err)
+      )
+
+
+
 }
-export const setLoading = () =>{
-  return{
-    type : SET_LOADING,
-}
+export const retrieveCountry = (url,key) => dispatch =>{
+
+    axios.get(url)
+      .then(response =>dispatch({
+          type:RETRIEVE_COUNTRY,
+          payload : response.data[key]
+        })
+
+      )
+      .catch(
+        err=>console.log(err)
+      )
+
 }

@@ -1,4 +1,5 @@
-export const SEARCH_MOVIES = 'SEARCH_MOVIES';
-export const FEATCH_MOVIES = 'FEATCH_MOVIES';
-export const FEATCH_MOVIE = 'FEATCH_MOVIE';
-export const SET_LOADING = 'LOADING';
+
+export const FEATCH_COUNTRY = 'FEATCH_COUNTRY';
+export const RETRIEVE_COUNTRY = 'RETRIEVE_COUNTRY';
+
+export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
